@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\School\\2025-2026\\Programming\\Softwere\\Code\\HomeworkEF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF573543-4EA1-4368-0E90-64D88FF09A3D}|Northwind\\Northwind.csproj|d:\\school\\2025-2026\\programming\\softwere\\code\\homeworkef\\northwind\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF573543-4EA1-4368-0E90-64D88FF09A3D}|Northwind\\Northwind.csproj|solutionrelative:northwind\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF573543-4EA1-4368-0E90-64D88FF09A3D}|Northwind\\Northwind.csproj|d:\\school\\2025-2026\\programming\\softwere\\code\\homeworkef\\northwind\\queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF573543-4EA1-4368-0E90-64D88FF09A3D}|Northwind\\Northwind.csproj|solutionrelative:northwind\\queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Queries.cs",
+              "DocumentMoniker": "D:\\School\\2025-2026\\Programming\\Softwere\\Code\\HomeworkEF\\Northwind\\Queries.cs",
+              "RelativeDocumentMoniker": "Northwind\\Queries.cs",
+              "ToolTip": "D:\\School\\2025-2026\\Programming\\Softwere\\Code\\HomeworkEF\\Northwind\\Queries.cs",
+              "RelativeToolTip": "Northwind\\Queries.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAhwHgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T19:59:11.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\School\\2025-2026\\Programming\\Softwere\\Code\\HomeworkEF\\Northwind\\Program.cs",
+              "RelativeDocumentMoniker": "Northwind\\Program.cs",
+              "ToolTip": "D:\\School\\2025-2026\\Programming\\Softwere\\Code\\HomeworkEF\\Northwind\\Program.cs*",
+              "RelativeToolTip": "Northwind\\Program.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-08T10:43:33.572Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
