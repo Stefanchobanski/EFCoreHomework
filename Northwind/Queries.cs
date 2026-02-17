@@ -3,11 +3,18 @@ using Northwind.Models.DTOs;
 
 namespace Northwind;
 
-public static class Queries
+public class Queries
 {
-    public static List<CustomerDTO> GetAllCustomers(NorthwindContext db)
+    private readonly NorthwindContext _db;
+
+    public Queries(NorthwindContext db)
     {
-        return db.Customers.Select(c =>
+        _db = db;
+    }
+
+    public List<CustomerDTO> GetAllCustomers()
+    {
+        return _db.Customers.Select(c =>
         new CustomerDTO()
         {
             CompanyName = c.CompanyName,
@@ -17,9 +24,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<CustomerDTO> GetAllCustomersSorted(NorthwindContext db)
+    public List<CustomerDTO> GetAllCustomersSorted()
     {
-        return db.Customers.Select(c =>
+        return _db.Customers.Select(c =>
         new CustomerDTO()
         {
             CompanyName = c.CompanyName,
@@ -30,9 +37,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<EmployeeDTO> GetAllEmployees(NorthwindContext db)
+    public List<EmployeeDTO> GetAllEmployees()
     {
-        return db.Employees.Select(e =>
+        return _db.Employees.Select(e =>
         new EmployeeDTO()
         {
             FirstName = e.FirstName,
@@ -42,9 +49,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<CategoryProductDTO> GetAllProduct(NorthwindContext db)
+    public List<CategoryProductDTO> GetAllProduct()
     {
-        return db.Products.Select(p =>
+        return _db.Products.Select(p =>
         new CategoryProductDTO()
         {
             CategoryName = p.Category.CategoryName,
@@ -54,9 +61,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<ProductDTO> GetFilteredProductByPrice(NorthwindContext db, decimal price = 30)
+    public  List<ProductDTO> GetFilteredProductByPrice(decimal price = 30)
     {
-        return db.Products.Where(p => p.UnitPrice > price)
+        return _db.Products.Where(p => p.UnitPrice > price)
             .Select(p =>
         new ProductDTO()
         {
@@ -66,9 +73,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<OrderDTO> GetOrdersAfterYear(NorthwindContext db, int year = 1997)
+    public List<OrderDTO> GetOrdersAfterYear(int year = 1997)
     {
-        return db.Orders.Where(o => o.OrderDate.Value.Year > year)
+        return _db.Orders.Where(o => o.OrderDate.Value.Year > year)
             .Select(o =>
         new OrderDTO()
         {
@@ -79,9 +86,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<CustomerOrderDTO> GetCustomersOrders(NorthwindContext db, int count = 10)
+    public List<CustomerOrderDTO> GetCustomersOrders(int count = 10)
     {
-        return db.Customers.Select(c =>
+        return _db.Customers.Select(c =>
         new CustomerOrderDTO()
         {
             CustomerId = c.CustomerId,
@@ -92,9 +99,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<OrderTotalDTO> GetIncomeOrders(NorthwindContext db, int count = 10)
+    public List<OrderTotalDTO> GetIncomeOrders(int count = 10)
     {
-        return db.Orders.Select(o =>
+        return _db.Orders.Select(o =>
         new OrderTotalDTO()
         {
             OrderId = o.OrderId,
@@ -105,9 +112,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<CustomerOrderDTO> GetCustomersWithMoreThanOrders(NorthwindContext db, int count = 10)
+    public List<CustomerOrderDTO> GetCustomersWithMoreThanOrders(int count = 10)
     {
-        return db.Customers.Select(c => 
+        return _db.Customers.Select(c => 
         new CustomerOrderDTO()
         {
             CustomerId = c.CustomerId,
@@ -118,9 +125,9 @@ public static class Queries
             .ToList();
     }
 
-    public static List<ProductOrderDTO> GetTopProductsByQuantity(NorthwindContext db, int count = 5)
+    public List<ProductOrderDTO> GetTopProductsByQuantity(int count = 5)
     {
-        return db.Products.Select(p =>  
+        return _db.Products.Select(p =>  
         new ProductOrderDTO()
         {
             ProductName = p.ProductName,

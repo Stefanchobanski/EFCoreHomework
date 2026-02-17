@@ -8,25 +8,27 @@ internal class Program
     {
         using NorthwindContext db = new NorthwindContext();
 
-        Print(Queries.GetAllCustomers(db));
+        Queries queries = new Queries(db);
+
+        Print(queries.GetAllCustomers());
         Console.WriteLine();
-        Print(Queries.GetAllCustomersSorted(db));
+        Print(queries.GetAllCustomersSorted());
         Console.WriteLine();
-        Print(Queries.GetAllEmployees(db));
+        Print(queries.GetAllEmployees());
         Console.WriteLine();
-        Print(Queries.GetAllProduct(db));
+        Print(queries.GetAllProduct());
         Console.WriteLine();
-        Print(Queries.GetFilteredProductByPrice(db));
+        Print(queries.GetFilteredProductByPrice());
         Console.WriteLine();
-        Print(Queries.GetOrdersAfterYear(db));
+        Print(queries.GetOrdersAfterYear());
         Console.WriteLine();
-        Print(Queries.GetCustomersOrders(db));
+        Print(queries.GetCustomersOrders());
         Console.WriteLine();
-        Print(Queries.GetIncomeOrders(db));
+        Print(queries.GetIncomeOrders());
         Console.WriteLine();
-        Print(Queries.GetCustomersWithMoreThanOrders(db));
+        Print(queries.GetCustomersWithMoreThanOrders());
         Console.WriteLine();
-        Print(Queries.GetTopProductsByQuantity(db));
+        Print(queries.GetTopProductsByQuantity());
     }
 
     public static void Print<T>(List<T> list)
